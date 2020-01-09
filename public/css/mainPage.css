@@ -1,0 +1,97 @@
+
+/* start here*/
+.card-img-overlay{
+    font-family: Ubuntu, Arial;
+    color: #481919;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+
+/* design kitchens */
+.card{
+    font-family: Ubuntu;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #D8D8D8;
+}
+
+.category_img{
+    height: 255px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card-img{
+    border-radius: 10px;
+    height: 400px;
+}
+
+/* animation */
+.card:hover{
+    box-shadow: 5px 5px 10px #9DCD53;
+}
+
+.col-sm{
+    padding-bottom: 30px;
+}
+
+
+.category_title_w_img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    border-radius:  0px 0px 10px 10px;
+    background-color: black;
+    opacity: .8;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+}
+
+.category_title_no_img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    border-radius:  0px 0px 10px 10px;
+    background-color: black;
+    opacity: .8;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.category_name{
+    font-size: 1.2rem;
+    color: white;
+}
+
+.flag{
+    /*position: absolute;*/
+    font-size: 1.5rem;
+    /*bottom: 0;*/
+    /*left: 0;*/
+    width:90px;
+    height:60px;
+    border-radius: 0 0 0 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: brightness(80%);
+}
+
+
+@media only screen and (max-width: 600px) {
+    .category_name {
+        font-size: 1.2rem;
+    }
+}

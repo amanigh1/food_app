@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+.mailName{
+    font-family: 'Ubuntu', Arial;
+    color: #744B28;
+    text-align: center;
+}
+
+.price{
+    font-family: Ubuntu;
+    color: #858585;
+    text-align: center;
+}
+
+
+.imageSection{
+    border: 0px;
+    margin: auto;
+    text-align: center;
+    max-width: 300px;
+    max-height: 300px;
+
+
+}
+
+.showImage{
+    border: 0px;
+    margin: auto;
+    text-align: center;
+    max-width: 300px;
+    max-height: 300px;
+
+}
+
+.info{
+    margin: auto;
+    text-align: center;
+    object-position: center;
+}
+
+#firstIcon{
+    color: white;
+    background-color: white;
+    border: 0px;
+    margin: auto;
+    text-align: center;
+    object-position: center;
+}
+.icon{
+    height: 30px;
+    width: 30px;
+}
+
+
+.btn-circle {
+    font-family: Ubuntu;
+    background-color: #744B28;
+    width: 45px;
+    height: 45px;
+    margin: auto;
+    text-align: center;
+    padding: 0;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px -5px #D8D8D8;
+}
+.btn-circle:hover{
+    background-color: #9DCD53;
+}
+
+.btns{
+    text-align: center;
+}
+
+#quantity{
+    color: black;
+    background: white;
+}
+
+.cartBtn{
+    background-color: #9DCD53;
+    color: white;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px -5px #D8D8D8;
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+
+}
+.cartBtn:hover{
+    background-color: #744B28;
+}
+
+
+.desc{
+    font-family: Ubuntu;
+    color: #AAAAAA;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+.form-group{
+    font-family: Ubuntu;
+    color: #9DCD53;
+    text-shadow: 1px 1px 10px #AAAAAA;
+    max-width: 300px;
+    text-align: center;
+    object-position: center;
+    margin: auto;
+}
