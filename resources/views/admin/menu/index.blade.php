@@ -7,10 +7,13 @@
     <hr class="w-25">
 
 
+    <!-- Add new item btn -->
     <div class="col-md-6 my-3">
         <a href="{{url('/menu/create')}}"><button class="btn green">Add new item</button></a>
     </div>
 
+
+    <!-- items table -->
     <div class="col-12">
         <div class="card">
 
@@ -28,14 +31,23 @@
                         </thead>
                         <tbody>
                         @forelse($menu as $item)
+
+                            <!-- row for each item -->
                         <tr class="record">
                             <td >{{$item->name}}</td>
                             <td>{{$item->description}}</td>
                             <td>{{$item->price}}</td>
                             <td>{{$item->category->name}}</td>
+
+                            <!-- Actions -->
                             <td class="d-flex text-center justify-content-center">
+                                <!-- view btn -->
                                 <a href="{{route('menu.show',$item['id'])}}" class="text-info"><i class="fa fa-eye"></i></a>
+
+                                <!-- edit btn -->
                                 <a href="{{route('menu.edit',$item['id'])}}" class="text-dark"><i class="fa fa-edit"></i></a>
+
+                                <!-- delete form -->
                                 <form onsubmit="return confirm('{{'Do you really want to delete'}} {{$item['name']}}?')" method="post" action="{{route('menu.destroy',$item['id'])}}" class="d-inline">
                                     @method('DELETE')
                                     @csrf

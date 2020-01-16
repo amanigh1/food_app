@@ -9,25 +9,42 @@
 
     <title>{{ config('app.name', 'Laravel')}} | @yield('title')</title>
 
-    <!-- Scripts -->
 
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     @yield('css')
 </head>
+
 <body>
     <div id="app">
-        <main class="py-4">
+        <main >
             @yield('content')
         </main>
     </div>
 
     @yield('footer')
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" ></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome-->
+    <script src="https://kit.fontawesome.com/b9241bc54a.js" crossorigin="anonymous"></script>
+
+    @yield('script')
 </body>
 </html>

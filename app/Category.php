@@ -14,6 +14,7 @@ class Category extends Model
         'title_img'
     ];
 
+    // make a relation between items and its categories
     public function menu(){
 
         return $this->hasMany('App\Menu');

@@ -9,9 +9,6 @@
 
     <title>{{ config('app.name', 'Laravel')}} | @yield('title')</title>
 
-    <!-- Scripts -->
-
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -39,7 +36,8 @@
             <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
         </div>
     </div>
-    <!-- /#sidebar-wrapper -->
+
+    <!-- sidebar-wrapper -->
     <div id="page-content-wrapper">
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
@@ -64,14 +62,30 @@
 </div>
 
 
-<!-- Menu Toggle Script -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}" ></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+
 <script>
+
+    // Menu Toggle Script
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
 
+    // Search
     $('input[name=quick-finder]').bind('keyup',function () {
         let val = $(this).val().toLowerCase();
         $('.record').hide();

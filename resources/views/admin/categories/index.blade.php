@@ -6,7 +6,7 @@
     <h2 class="text-center">Categories</h2>
     <hr class="w-25">
 
-
+    <!-- add new category -->
     <div class="col-md-6 my-3">
         <a href="{{url('/categories/create')}}"><button class="btn green">Add new category</button></a>
     </div>
@@ -17,6 +17,8 @@
             <div class="card-body">
                 <input type="text" name="quick-finder" class="form-control" placeholder="Search">
 
+
+                <!-- categories tables -->
                 <div class="table-responsive text-center table-hover table-striped mt-3">
                     <table class="table">
                         <thead>
@@ -31,9 +33,17 @@
                             <td>{{$category->id}}</td>
                             <td >{{$category->name}}</td>
                             <td>{{$category->description}}</td>
+
+                            <!-- Actions -->
                             <td class="d-flex text-center justify-content-center">
+
+                                <!-- view btn -->
                                 <a href="{{route('categories.show',$category['id'])}}" class="text-info"><i class="fa fa-eye"></i></a>
+
+                                <!-- edit btn -->
                                 <a href="{{route('categories.edit',$category['id'])}}" class="text-dark"><i class="fa fa-edit"></i></a>
+
+                                <!-- delete form -->
                                 <form onsubmit="return confirm('{{'Do you really want to delete'}} {{$category['description']}}?')" method="post" action="{{route('categories.destroy',$category['id'])}}" class="d-inline">
                                     @method('DELETE')
                                     @csrf

@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
 
-.mailName{
+.card {
+    font-family: Ubuntu;
+    color: #737373;
+    border: 0px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 5px 5px 10px #D8D8D8;
+    padding: 20px;
+    max-width: 800px;
+}
+
+.mealName{
     font-family: 'Ubuntu', Arial;
     color: #744B28;
     text-align: center;
@@ -12,24 +22,27 @@
     text-align: center;
 }
 
+.itemBadge{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
 
 .imageSection{
-    border: 0px;
-    margin: auto;
-    text-align: center;
-    max-width: 300px;
-    max-height: 300px;
-
-
+    border: 0;
+    margin: 0;
+    width: 100%;
+    height: 400px;
 }
 
 .showImage{
     border: 0px;
     margin: auto;
     text-align: center;
-    max-width: 300px;
-    max-height: 300px;
-
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*background-size: */
 }
 
 .info{
@@ -61,7 +74,7 @@
     text-align: center;
     padding: 0;
     border: 0px;
-    border-radius: 10px;
+    border-radius: 50%;
     box-shadow: 0px 5px 10px -5px #D8D8D8;
 }
 .btn-circle:hover{
@@ -110,3 +123,69 @@
     object-position: center;
     margin: auto;
 }
+
+.btmBtn{
+    text-align: right;
+    display: inline-block;
+    padding: 0;
+    margin: 0 5px;
+}
+
+.btmBtn.icon img{
+    width: 30px;
+    height: 30px;
+}
+
+.cartContainer {
+    position: absolute;
+    bottom: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .titleHeader h5{
+        font-size: 100%;
+    }
+
+    .imageSection{
+        border: 0;
+        margin: 0;
+        width: 100%;
+        height: 300px;
+    }
+
+    .card {
+        box-shadow: none;
+        max-width: 600px;
+
+    }
+
+    .itemBadge{
+        position: absolute;
+        top: 9px;
+        right: 9px;
+    }
+
+    .cartContainer {
+        position: relative;
+
+    }
+
+    .btmBtn.icon img{
+        width: 25px;
+        height: 25px;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    .imageSection{
+        border: 0;
+        margin: 0;
+        width: 100%;
+        height: 200px;
+    }
+
+}
+
+

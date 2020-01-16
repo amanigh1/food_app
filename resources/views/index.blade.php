@@ -7,32 +7,54 @@
 @endsection
 
 @section('content')
-    <div class="container">
-        @include('_partials._logo_bar')
+    <div class="container ">
+
+        <!-- Logo Bar -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+            <div class="container">
+                <div class="brandBox col-12">
+                    <a href="{{url('/')}}">
+                        <img id="xIcon" src="{{ asset('Icons/organic-restaurant-logo-D34AC3E788-seeklogo.com.png')}}"
+                             height="90px" width="90px">
+                    </a>
+                </div>
+            </div>
+        </nav>
     </div>
+
+
     <div class="container mt-5 pt-5 mb-5 pb-5">
-        <h3 class="text-center">International Kitchens</h3>
-        <hr class="w-25">
+        <h5 class="text-center mt-4 text-secondary">International Kitchens</h5>
+        <hr class="w-50">
         <div class="row">
+
+            <!-- Card for each kitchen -->
+
             @forelse($categories as $category)
                 <div class=" col-sm-12 col-md-6 col-lg-4 p-2">
-                    <div class="card  category_img" style="background-image: url({{url('FoodPics/Header/'.$category->card_img)}})">
+                    <div class="card category_img"
+                         style="background-image: url({{url('FoodPics/Header/'.$category->card_img)}})">
                         <a href="{{url('itemsPage/'.$category->id)}}">
                             <div class="card-img-overlay">
 
-                                    @if(!empty($category->title_img))
+
+                            @if(!empty($category->title_img))
+                                <!--  if category has a flag  -->
                                     <div class="category_title_w_img">
-                                    <div style="background-image: url({{asset('flags/'.$category->title_img)}})" class="flag"></div>
+                                        <!--  category's img  -->
+                                        <div style="background-image: url({{asset('flags/'.$category->title_img)}})"
+                                             class="flag"></div>
+                                        <!--  category's name  -->
                                         <div class="category_name">{{$category->description}}</div>
                                     </div>
 
-                                    @else
+                            @else
+                                <!--  if category does't have a flag  -->
                                     <div class="category_title_no_img">
+                                        <!--  category's name  -->
                                         <div class="category_name">{{$category->description}}</div>
                                     </div>
-                                    @endif
-
-
+                                @endif
 
 
                             </div>
@@ -45,109 +67,19 @@
         </div>
     </div>
 
-    {{--    <!-- Kitchens -->--}}
-
-    {{--    <div class="container mt-5 pt-5">--}}
-
-    {{--        <div class="row">--}}
-
-    {{--            <!-- Kitchen 1 -->--}}
-    {{--            <div class="col-sm-12 col-md-6 col-lg-3 p-2">--}}
-    {{--                <a href="{{url('itemsPage')}}">--}}
-    {{--                    <img  src="../Food Pics/dan-gold-4_jhDO54BYg-unsplash.jpg" class="card-img">--}}
-    {{--                    <div class="card-img-overlay">--}}
-    {{--                        <span class="badge badge-pill badge-danger"> New </span>--}}
-    {{--                    </div>--}}
-    {{--                </a>--}}
-    {{--            </div>--}}
-
-    {{--            <!-- Kitchen 2 -->--}}
-    {{--            <div class="col-sm-12 col-md-6 col-lg-3 p-2">--}}
-    {{--                <a href="{{url('itemsPage')}}">--}}
-    {{--                <img  src="../Food Pics/dan-gold-4_jhDO54BYg-unsplash.jpg" class="card-img">--}}
-    {{--                    <div class="card-img-overlay">--}}
-    {{--                        <span class="badge badge-pill badge-danger"> New </span>--}}
-    {{--                    </div>--}}
-    {{--                </a>--}}
-    {{--            </div>--}}
-
-    {{--            <!-- Kitchen 3 -->--}}
-    {{--            <div class="col-sm-12 col-md-6 col-lg-3 p-2">--}}
-    {{--                <a href="{{url('itemsPage')}}">--}}
-    {{--                    <img  src="../Food Pics/dan-gold-4_jhDO54BYg-unsplash.jpg" class="card-img">--}}
-    {{--                    <div class="card-img-overlay">--}}
-    {{--                        <span class="badge badge-pill badge-danger"> New </span>--}}
-    {{--                    </div>--}}
-    {{--                </a>--}}
-    {{--            </div>--}}
-
-    {{--            <!-- Kitchen 4 -->--}}
-    {{--            <div class="col-sm-12 col-md-6 col-lg-3 p-2">--}}
-    {{--                <a href="{{url('itemsPage')}}">--}}
-    {{--                    <img  src="../Food Pics/dan-gold-4_jhDO54BYg-unsplash.jpg" class="card-img">--}}
-    {{--                    <div class="card-img-overlay">--}}
-    {{--                        <span class="badge badge-pill badge-danger"> New </span>--}}
-    {{--                    </div>--}}
-    {{--                </a>--}}
-    {{--            </div>--}}
-
-    {{--            <!-- Kitchen 5 -->--}}
-    {{--            <div class="col-sm-12 col-md-6 col-lg-3 p-2">--}}
-    {{--                <a href="{{url('itemsPage')}}">--}}
-    {{--                    <img  src="../Food Pics/dan-gold-4_jhDO54BYg-unsplash.jpg" class="card-img">--}}
-    {{--                    <div class="card-img-overlay">--}}
-    {{--                        <span class="badge badge-pill badge-danger"> New </span>--}}
-    {{--                    </div>--}}
-    {{--                </a>--}}
-    {{--            </div>--}}
-
-    {{--            <!-- Kitchen 6 -->--}}
-    {{--            <div class="col-sm-12 col-md-6 col-lg-3 p-2">--}}
-    {{--                <a href="{{url('itemsPage')}}">--}}
-    {{--                    <img  src="../Food Pics/dan-gold-4_jhDO54BYg-unsplash.jpg" class="card-img">--}}
-    {{--                    <div class="card-img-overlay">--}}
-    {{--                        <span class="badge badge-pill badge-danger"> New </span>--}}
-    {{--                    </div>--}}
-    {{--                </a>--}}
-    {{--            </div>--}}
-
-    {{--            <!-- Kitchen 7 -->--}}
-    {{--            <div class="col-sm-12 col-md-6 col-lg-3 p-2">--}}
-    {{--                <a href="{{url('itemsPage')}}">--}}
-    {{--                    <img  src="../Food Pics/dan-gold-4_jhDO54BYg-unsplash.jpg" class="card-img">--}}
-    {{--                    <div class="card-img-overlay">--}}
-    {{--                        <span class="badge badge-pill badge-danger"> New </span>--}}
-    {{--                    </div>--}}
-    {{--                </a>--}}
-    {{--            </div>--}}
-
-    {{--            <!-- Kitchen 8 -->--}}
-    {{--            <div class="col-sm-12 col-md-6 col-lg-3 p-2">--}}
-    {{--                <a href="{{url('itemsPage')}}">--}}
-    {{--                    <img  src="../Food Pics/dan-gold-4_jhDO54BYg-unsplash.jpg" class="card-img">--}}
-    {{--                    <div class="card-img-overlay">--}}
-    {{--                        <span class="badge badge-pill badge-danger"> New </span>--}}
-    {{--                    </div>--}}
-    {{--                </a>--}}
-    {{--            </div>--}}
-
-    {{--            <!-- Kitchen 9 -->--}}
-    {{--            <div class="col-sm-12 col-md-6 col-lg-3 p-2">--}}
-    {{--                <a href="{{url('itemsPage')}}">--}}
-    {{--                    <img  src="../Food Pics/dan-gold-4_jhDO54BYg-unsplash.jpg" class="card-img">--}}
-    {{--                    <div class="card-img-overlay">--}}
-    {{--                        <span class="badge badge-pill badge-danger"> New </span>--}}
-    {{--                    </div>--}}
-    {{--                </a>--}}
-    {{--            </div>--}}
-
-    {{--        </div>--}}
-    {{--    </div>--}}
-
 
 @endsection
 
 
 @section('footer')
+
+
+    @if(session()->has('cart') && !session()->get('cart')->checkout && !session()->has('isEditing'))
+        @include('_partials._viewOrder_bar')
+
+    @elseif(session()->has('isEditing') && session()->get('isEditing'))
+        @include('_partials._editOrder_bar')
+    @endif
+
     @include('_partials._bottom_bar')
 @endsection

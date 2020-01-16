@@ -16,6 +16,8 @@ class Menu extends Model
         'img',
         'category_id'
     ];
+
+  // make a relation between items and its categories
     public function category(){
 
         return $this->belongsTo('App\Category');
